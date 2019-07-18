@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" /> -->
     
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -13,19 +9,124 @@
     <title>FCC-SurveyForm</title>
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/bulma.css">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
+    <!-- <link rel="stylesheet" href="css/bulma.css">    -->
+    <!-- <link rel="stylesheet" href="css/iconmonstr-iconic-font.css"> -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+    <header></header>
     <main>
-        <div class="container">
-            <h1 id="title">Survey Form</h1>
+        <h1 id="title">Survey Form</h1>
+        <p id="description">Please fill out a short survey</p>
+        <form id="survey-form">            
+            <div class="field">
+                <label id="name-label" for="name">* Name: </label>
+                <div class="control has-icons-left">
+                    <input id="name" class="input" type="text" placeholder="Your name" required>
+                    <span class="icon is-left">
+                        <i class="im im-user-male"></i>
+                    </span>
+                </div>
+            </div>
             
-        </div>
+            <div class="field">
+                <label id="email-label" for="email">* Email: </label>
+                <div class="control has-icons-left">
+                    <input id="email" class="input" type="email" placeholder="Your name" required>
+                    <span class="icon is-large is-left">
+                        <i class="im im-mail"></i>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="input-container">
+                <div class="field">
+                    <label id="number-label" for="coffeeCount">How many coffee did you drink today?
+                    </label>
+                    <div class="control has-icons-left">
+                        <input id="number" class="input" type="number" name="coffeCount" min="1" max="125"
+                        placeholder="Type a number">
+                        <span class="icon is-large is-left">
+                            <i class="im im-coffee"></i>
+                        </span>
+                    </div>
+                    <p class="help is-danger">Please dial '000' if your number exceeds 125</p>
+                </div>
+                
+                <div class="field">
+                    <label for="coffeePlace">Where do you usually go to get your coffee fix?
+                        
+                    </label>
+                    <div class="select">
+                        <select id="dropdown">
+                            <option>Chained coffee store (e.g., Starbucks)</option>
+                            <option>Local coffee shop</option>
+                            <option>Anywhere</option>
+                            <option>At home</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="field">
+                <label for="chooseTypeOfCoffee">Please choose one of the following drinks you prefer: </label>
+                <div class="checkbox-container --flex">
+                    <label class="checkbox">
+                        <input type="checkbox" name="typeOfCoffee" value="1">Espresso
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="typeOfCoffee" value="2">Cappuchino
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="typeOfCoffee" value="3">Latte
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="typeOfCoffee" value="4">Mocha
+                    </label>
+                    <label class="checkbox">
+                        <input type="checkbox" name="typeOfCoffee" value="5">Frappuchino
+                    </label>
+                </div>
+            </div>
+            
+            <div class="field">
+                <label for="occupation">What is your occupation?</label>
+                <div class="radio-container">
+                    <label class="radio">
+                        <input type="radio" name="rsvp" value="1">
+                        Student
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="rsvp" value="2">
+                        Professional
+                    </label>
+                    <label class="radio">
+                        <input type="radio" name="rsvp" value="3">
+                        Unemployed
+                    </label>
+                </div>
+            </div>
+            
+            <div class="field">
+                <label for="comment">Anything else you would like to add?</label>
+                <textarea id="comments" class="textarea" placeholder="Coffee is the best, yay!"></textarea>
+            </div>
+            
+            <div class="field --flex">
+                <button id="submit" class="button">
+                    Submit
+                    <span class="icon is-small">
+                        <i class="im im-paperplane"></i>
+                    </span>
+                </button>
+            </div>
+            
+        </form>
     </main>
-    <footer>Chinh Do 2019</footer>
+    <footer class="--flex">Chinh Do 2019</footer>
     
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>

@@ -3,25 +3,84 @@
 /* This stylesheet is organized using BEM methology *******/
 /* Basic Theme ********************************************/
 
-body {
+a, a:link, a:active, a:hover, a:visited, a:disabled {
+    text-decoration: none;
+}
+
+
+h1 {
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+html, body {
     font-family: 'Raleway', sans-serif;
-    background: #004D40;
-    color: #fff8e1 ;
+    background: #1DE9B6;
+    color: #E0F7FA;
+}
+
+.label, .radio:hover, .checkbox:hover {    
+    color: #E0F7FA;
+}
+
+main {
+    background: #263238;
+}
+
+footer {
+    color: #263238;
+}
+
+input {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
 }
 
 /* Block ************************************************/
 
-html, body {
+html {
     height: 100%;
 }
 
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    height: 32px;
 }
 
 main {
     flex: 1 0 auto;
+    padding: 4em;
+}
+
+main, footer {    
+    width: 70%;
 }
 
 form {
@@ -30,20 +89,66 @@ form {
 
 footer {
     flex-shrink: 0;
-    padding: 1em 2em;
+    align-content: center;
+    justify-content: flex-end;
+    height: 32px;
     text-align: right;
 }
 
 /* Element **********************************************/
 
-.input-container {
-    flex-direction: row;
-    padding: 2em;
+main h1, p {
+    text-align: center;
 }
 
-.input-container div {
-    /* width: 100%; */
-    margin: 2em;
+.field {
+    padding: 0.5em 0;
+}
+
+.im {
+    font-size: 16px;
+}
+
+/* input:focus {
+    border-style: none;
+} */
+
+input:invalid, input:invalid:hover {
+    border: 1px solid #C51162;
+}
+
+.field .help {
+    text-align: left;
+}
+
+.input-container {
+    display: grid;
+    grid-template-columns: 40% auto;
+    grid-gap: 2em;
+}
+
+.checkbox-container {
+    flex-direction: column;
+}
+
+.checkbox-container > label {
+    padding-bottom: 0.5em;
+}
+
+input[type=checkbox] {
+    margin-right: 0.5em;  
+}
+
+form:last-of-type div {
+    justify-content: center;
+}
+
+#submit {
+    width: 112px;
+}
+
+.button {
+    justify-content: space-evenly;
 }
 
 /* Modifier *********************************************/
@@ -53,12 +158,6 @@ footer:before { content:"\00a9"; }
 .--flex {
     display: flex;
     flex-wrap: wrap;
-}
-
-.--Pgrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 2em;
 }
 
 /* Responsive *******************************************/
