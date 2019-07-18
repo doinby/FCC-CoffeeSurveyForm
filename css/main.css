@@ -1,63 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
 /* This stylesheet is organized using BEM methology *******/
 /* Basic Theme ********************************************/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    vertical-align: baseline;
-    list-style: none;
-    font-family: 'Montserrat', sans-serif;
-}
 
-header, footer, main {
-    background: #E0E0E0;
-}
-
-header {    
-    color: #2979ff;
-}
-
-a, a:link, a:active, a:hover, a:visited, a:disabled {
-    /* margin: 0; */
-    text-decoration: none;
-}
-
-
-h1 {
-    font-size: 48px;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 36px;
-    font-weight: 700;
-}
-
-h3 {
-    font-size: 28px;
-}
-
-h4 {
-    font-size: 22px;
-}
-
-p {
-    font-size: 14px;
-    line-height: 24px;
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #004D40;
+    color: #fff8e1 ;
 }
 
 /* Block ************************************************/
@@ -65,20 +14,52 @@ p {
 html, body {
     height: 100%;
 }
+
 body {
     display: flex;
     flex-direction: column;
 }
+
 main {
     flex: 1 0 auto;
 }
+
+form {
+    padding: 2em;
+}
+
 footer {
     flex-shrink: 0;
+    padding: 1em 2em;
+    text-align: right;
 }
 
 /* Element **********************************************/
 
+.input-container {
+    flex-direction: row;
+    padding: 2em;
+}
+
+.input-container div {
+    /* width: 100%; */
+    margin: 2em;
+}
+
 /* Modifier *********************************************/
+
+footer:before { content:"\00a9"; }
+
+.--flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.--Pgrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2em;
+}
 
 /* Responsive *******************************************/
 @media (max-width: 800px) {}
